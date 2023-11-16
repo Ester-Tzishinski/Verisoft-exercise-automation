@@ -31,6 +31,7 @@ public class BasicTest {
         return  currentText.equals(expectedText);
     }
 
+
     public void closeDriver(){
         driver.quit();
     }
