@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+    <values>
+        <column_to_search>1</column_to_search>
+        <text>Island Trading</text>
+        <column_to_return>3</column_to_return>
+        <expected_text>UK</expected_text>
+    </values>
+</class>
