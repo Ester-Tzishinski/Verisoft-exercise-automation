@@ -8,15 +8,15 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
- @SpringBootApplication
+@SpringBootApplication
 public class VerisoftApplication {
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(VerisoftApplication.class, args);
-		W3SchoolTest w3SchoolTest = new W3SchoolTest();
-		boolean isValid = w3SchoolTest.checkHtmlTables();
-		System.out.println("is valid " + isValid);
-		w3SchoolTest.closeDriver();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(VerisoftApplication.class, args);
+        W3SchoolTest w3SchoolTest = new W3SchoolTest();
+        boolean isValid = w3SchoolTest.checkHtmlTables();
+        System.out.println("is valid " + isValid);
+        w3SchoolTest.closeDriver();
+    }
 
 }

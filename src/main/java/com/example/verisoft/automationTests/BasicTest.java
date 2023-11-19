@@ -14,7 +14,7 @@ public class BasicTest {
     SearchTextUtils searchTextUtils;
 
 
-    public BasicTest(){
+    public BasicTest() {
         System.setProperty("webdriver.chrome.driver", "chrome\\chromedriver.exe");
         driver = new ChromeDriver();
         xmlDataManager = new XmlDataManager();
@@ -23,15 +23,15 @@ public class BasicTest {
 
     public boolean verifyTableCellText(WebElement table, int searchColumn, String searchText, int returnColumnText, String expectedText) throws Exception {
         String currentText = searchTextUtils.getTableCellTextByXpath(table, searchColumn, searchText, returnColumnText);
-        if(currentText == null){
+        if (currentText == null) {
             // TODO : implementCustomException
-            throw new Exception("the element: "+ currentText + " is not found in searchColum");
+            throw new Exception("the element: " + currentText + " is not found in searchColum");
         }
-        return  currentText.equals(expectedText);
+        return currentText.equals(expectedText);
     }
 
 
-    public void closeDriver(){
+    public void closeDriver() {
         driver.quit();
     }
 }

@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class W3SchoolTest extends BasicTest {
-    public static String BASE_URL="https://www.w3schools.com/html/html_tables.asp";
+    public static String BASE_URL = "https://www.w3schools.com/html/html_tables.asp";
 
-    public W3SchoolTest(){
+    public W3SchoolTest() {
         driver.get(BASE_URL);
     }
 
@@ -22,7 +22,7 @@ public class W3SchoolTest extends BasicTest {
             isTableValid = verifyTableCellText(table, searchColumn, searchText, returnColumnText, expectedText);
             // TODO: return in case of false/ create list of validate for each one.
         } catch (Exception e) { // TODO: catch just the custom exception
-           // TODO: log.error
+            // TODO: log.error
             System.out.println("The table is not valid: " + e.getMessage());
         }
         return isTableValid;

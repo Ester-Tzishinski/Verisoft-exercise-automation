@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class XmlDataManager {
 
-    public static String LOCAL_DIRECTORY_PATH="src\\main\\resources\\values.xml";
+    public static String LOCAL_DIRECTORY_PATH = "src\\main\\resources\\values.xml";
 
     public String getDataFromXml(String keyName) {
         try {
@@ -27,8 +27,7 @@ public class XmlDataManager {
             }
             assert doc != null;
             return doc.getElementsByTagName(keyName).item(0).getTextContent();
-        }
-         catch (Exception e){
+        } catch (Exception e) {
             // TODO before all tests check that xml is valid
             throw new RuntimeException("The xml is not valid" + e.getMessage());
         }
