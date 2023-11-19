@@ -25,8 +25,7 @@ public class BasicTest {
         String currentText = searchTextUtils.getTableCellTextByXpath(table, searchColumn, searchText, returnColumnText);
         if(currentText == null){
             // TODO : implementCustomException
-            //TODO: print the values
-            throw new Exception("the element is not found in searchColum");
+            throw new Exception("the element: "+ currentText + " is not found in searchColum");
         }
         return  currentText.equals(expectedText);
     }
